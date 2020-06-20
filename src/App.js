@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Header from "./components/Header/Header";
 
-function App() {
+const lightTheme = {
+  "--color-solid": "black",
+  "--color-surface": "white",
+  "--color-primary": "teal"
+};
+
+const darkTheme = {
+  "--color-solid": "white",
+  "--color-surface": "black",
+  "--color-primary": "purple"
+};
+
+const applyTheme = (nextTheme, cb) => {
+  const theme = nextTheme === "light" ? lightTheme : darkTheme;
+  Object.keys(theme).map(key => {
+    const value = theme[key];
+    document.documentElement.style.setProperty(key, value);
+  });
+  cb();
+};
+
+const App = () => {
+  const [currentTheme, setTheme] = React.useState("light");
+
+  const onClick = () => {
+    const nextTheme = currentTheme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+    applyTheme(nextTheme, () => setTheme(nextTheme));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{currentTheme === "light" ? "Light theme" : "Dark theme"}</h1>
+      <button onClick={onClick}>Toggle theme</button>
+      <Header/>
     </div>
   );
-}
+};
 
 export default App;
