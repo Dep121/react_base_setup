@@ -1,4 +1,4 @@
-.input_wrapper {
+/* .input_wrapper {
     overflow: hidden;
     caret-color: black;
 }
@@ -33,4 +33,4 @@ input:focus {
 input:invalid {
     background: repeating-linear-gradient(90deg, red 0, red 4ch, transparent 0, transparent 6ch) 0 100%/100% 1px no-repeat;
     caret-color: red;
-}
+} */
