@@ -1,0 +1,31 @@
+@import "../../commonStyles/variables.scss";
+
+.inputWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.inputOtp {
+    -webkit-appearance: none;
+    -moz-appearance:    textfield;
+    appearance:         none;
+    width: 11%;
+    text-align: center;
+    border: none;
+    @include fontStyle(1.5rem, $Black, 600);
+    border-bottom: 1px solid $DGrey;
+    padding: 5px;
+
+    &--error {
+        border-bottom-color: $Red;
+        &:focus {
+            border-bottom-color: $Red;
+        }
+    }
+}
+
+.error {
+    color: $Red;
+}
