@@ -1,4 +1,4 @@
 
 ```js
-    <OtpInputV3/>
+<OtpInputV3 length={4} />
 ```

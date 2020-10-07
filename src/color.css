@@ -1,0 +1,16 @@
+:root {
+  --color-primary: #485922;
+  --color-secondary: #798c35;
+  --color-surface: #ffffff;
+  --color-background: #ffffff;
+  --color-border: #121212;
+
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #000000;
+  --color-on-surface: #000000;
+  --color-on-background: #000000;
+
+  /* states */
+  --color-error: #b00020;
+  --color-on-error: #ffffff;
+}

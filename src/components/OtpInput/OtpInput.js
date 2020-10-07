@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './OtpInput.css';
+import s from './OtpInput.scss';
 
 function OtpInput() {
     const [value, setValue] = React.useState("");
@@ -16,7 +16,7 @@ function OtpInput() {
     }
 
     return (
-        <div className='input_wrapper'>
+        <div className={s.input_wrapper}>
             <input
             type='number'
             value={value}

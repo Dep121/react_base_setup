@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Button.css';
+import s from './Button.module.scss';
+
 function Button({ disabled, onClick, rounded, children }) {
 
-    let round = rounded ? 'round' : '';
-    return <button onClick={onClick} className={`btn ${round}`} disabled={disabled}>
+    let round = rounded ? 'rounded' : '';
+    return <button onClick={onClick} className={`${s.btn} ${s[round]}`} disabled={disabled}>
         {children}
     </button>
 }

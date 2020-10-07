@@ -1,0 +1,90 @@
+/**
+ * Yields a list of 7 maps (diffs)
+
+(
+  (adjust-hue: 195.3931deg, desaturate: 64.78873%, lighten: 20.19608%),
+  (adjust-hue: 269.7931deg, desaturate: 92.30769%, lighten: 8.62745%),
+  (adjust-hue: 352.82536deg, desaturate: 60.75949%, lighten: 3.13725%),
+  (adjust-hue: 0deg, saturate: 0%, lighten: 0%),
+  (adjust-hue: 0.20532deg, desaturate: 47.80876%, darken: 16.66667%),
+  (adjust-hue: 0deg, desaturate: 47.90419%, darken: 33.13725%),
+  (adjust-hue: -0.13095deg, desaturate: 47.68212%, darken: 36.27451%)
+)
+
+ */
+/**
+ * Yields
+
+(
+  lightest: #f4f1f3, 
+  lighter: #d5d5d5, 
+  light: #c2cec0, 
+  base: lightgreen, 
+  dark: #79b079, 
+  darker: #4f864f, 
+  darkest: #497c49
+)
+
+ */
+.demo {
+  width: 100%;
+}
+.theme-light .demo {
+  color: #485922;
+}
+.theme-dark .demo {
+  color: #485922;
+}
+
+:root {
+  --color-surface: white;
+  --color-solid: black;
+  --color-primary: teal;
+  --color-brand-color: #c4421a;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.inputOtp {
+  appearance: none;
+  width: 11%;
+  text-align: center;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 5px;
+}
+.theme-light .inputOtp {
+  color: #000000;
+  border-bottom: 1px solid #121212;
+}
+.theme-dark .inputOtp {
+  color: #ffffff;
+  border-bottom: 1px solid #363636;
+}
+.theme-light .inputOtp--error {
+  border-bottom-color: #ffffff;
+}
+.theme-dark .inputOtp--error {
+  border-bottom-color: #000000;
+}
+.theme-light .inputOtp--error:focus {
+  border-bottom-color: #ffffff;
+}
+.theme-dark .inputOtp--error:focus {
+  border-bottom-color: #000000;
+}
+
+.theme-light .error {
+  color: #ffffff;
+}
+.theme-dark .error {
+  color: #000000;
+}
+
+/*# sourceMappingURL=otpinput.css.map */

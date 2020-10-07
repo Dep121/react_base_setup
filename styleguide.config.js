@@ -1,3 +1,4 @@
+const path = require('path');
 
 module.exports = {
     template: {
@@ -5,7 +6,7 @@ module.exports = {
             links: [
                 {
                     rel: 'stylesheet',
-                    href: './src/theme.css'
+                    href: './src/color.css',
                 }
             ]
         }

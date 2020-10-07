@@ -1,5 +1,5 @@
 import React, { PureComponent, useEffect, useState } from 'react';
-import s from './Meter.css';
+import s from './Meter.scss';
 
 class Meter extends PureComponent {
 

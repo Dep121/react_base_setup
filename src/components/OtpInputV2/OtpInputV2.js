@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './OtpInputV2.css';
+import s from './OtpInputV2.scss';
 
 function OtpInputV2() {
     const [value1, setValue1] = React.useState("");
@@ -85,7 +85,7 @@ function OtpInputV2() {
     }
 
     return (
-        <div className='input_wrapper'>
+        <div className={s.input_wrapper}>
             <input id='1' type='number' value={value1} onChange={onchange} onFocus={onfocus} onBlur={onblur} onKeyDown={onkeydown} max='9' min='0' />
             <input id='2' type='number' value={value2} onChange={onchange} onFocus={onfocus} onBlur={onblur} onKeyDown={onkeydown} max='9' min='0' />
             <input id='3' type='number' value={value3} onChange={onchange} onFocus={onfocus} onBlur={onblur} onKeyDown={onkeydown} max='9' min='0' />

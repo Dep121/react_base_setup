@@ -1,0 +1,14 @@
+// @use '../../commonStyles/theme' as t;
+@use '../../commonStyles/variables' as v;
+
+.header {
+    color: var(--color-primary);
+
+    background-color: var(--color-background);
+
+    font-size: 30px;
+    font-weight: bold;
+    user-select: none;
+
+    @include v.fontStyle(12px, red, 700);
+}

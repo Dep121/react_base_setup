@@ -35,6 +35,7 @@
     ]
   },
   "devDependencies": {
-    "react-styleguidist": "^11.0.8"
+    "react-styleguidist": "^11.0.8",
+    "sass": "^1.26.11"
   }
 }
