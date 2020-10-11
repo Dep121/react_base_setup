@@ -1,0 +1,12 @@
+.topRestaurantContainer {
+    .groupContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 500px;
+        .group {
+            padding: 5px;
+            width: 40%;
+        }
+    }
+}

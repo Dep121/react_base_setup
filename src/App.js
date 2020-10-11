@@ -4,6 +4,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import OtpInputV3 from "./components/OtpInputV3/OtpInputV3";
 import Button from "./components/Button/Button";
+import SearchBox from "./components/SearchBox/SearchBox";
+import TopRestaurant from "./views/TopRestaurant";
 
 const lightTheme = {
   "--color-primary": "#485922",
@@ -59,7 +61,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>{currentTheme === "light" ? "Light theme" : "Dark theme"}</h1>
+      {/* <h1>{currentTheme === "light" ? "Light theme" : "Dark theme"}</h1>
       <Button onClick={onClick}>Toggle theme</Button>
       <Header />
       <br/>
@@ -68,6 +70,9 @@ const App = () => {
       <Button>
         Click me
       </Button>
+      <br/>
+      <SearchBox list={[]} /> */}
+      <TopRestaurant/>
     </div>
   );
 };

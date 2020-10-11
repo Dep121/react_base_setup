@@ -1,0 +1,20 @@
+.listitem {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border: 1px solid salmon;
+	margin: 5px;
+	padding: 5px;
+  .left {
+		text-align: center;
+		width: 20%;
+  }
+  .middle {
+		text-align: left;
+		width: 50%;
+  }
+  .right {
+		width: 30%;
+		text-align: right;
+  }
+}
