@@ -14,8 +14,8 @@ function ListItem({ heading, subHeading, logoName, logo, rating }) {
                 </div>
             }
             <div className={s.middle}>
-                <h3>{heading}</h3>
-                <h4>{subHeading}</h4>
+                <div className={s.heading}>{heading}</div>
+                <div className={s.subHeading}>{subHeading}</div>
             </div>
             <div className={s.right}>
                 <StarRating rating={rating} />

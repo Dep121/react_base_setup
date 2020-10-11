@@ -1,7 +1,6 @@
 .listitem {
 	display: flex;
 	align-items: center;
-	width: 100%;
 	border: 1px solid salmon;
 	margin: 5px;
 	padding: 5px;
@@ -12,6 +11,15 @@
   .middle {
 		text-align: left;
 		width: 50%;
+
+		.heading {
+			font-weight: 900;
+		}
+
+		.subHeading {
+			font-weight: 300;
+			color: var(--color-on-surface);
+		}
   }
   .right {
 		width: 30%;

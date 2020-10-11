@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Header from "./components/Header/Header";
@@ -16,7 +16,7 @@ const lightTheme = {
 
   "--color-on-primary": "#ffffff",
   "--color-on-secondary": "#000000",
-  "--color-on-surface": "#000000",
+  "--color-on-surface": "#485922",
   "--color-on-background": "#000000",
 
   // states
@@ -41,7 +41,7 @@ const darkTheme = {
   "--color-on-error": "#000000",
 };
 
-const applyTheme = (nextTheme, cb) => {
+const applyTheme = (nextTheme = "light", cb=()=>{}) => {
   const theme = nextTheme === "light" ? lightTheme : darkTheme;
   Object.keys(theme).map(key => {
     const value = theme[key];
@@ -52,6 +52,10 @@ const applyTheme = (nextTheme, cb) => {
 
 const App = () => {
   const [currentTheme, setTheme] = React.useState("light");
+
+  useEffect(()=>{
+    applyTheme();
+  }, []);
 
   const onClick = () => {
     const nextTheme = currentTheme === "light" ? "dark" : "light";
