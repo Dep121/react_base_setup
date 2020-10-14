@@ -4,8 +4,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import OtpInputV3 from "./components/OtpInputV3/OtpInputV3";
 import Button from "./components/Button/Button";
+import { BrowserRouter, Route, Switch, Link, useRouteMatch } from 'react-router-dom';
 import SearchBox from "./components/SearchBox/SearchBox";
-import TopRestaurant from "./views/TopRestaurant";
 
 const lightTheme = {
   "--color-primary": "#485922",
@@ -67,6 +67,9 @@ const App = () => {
     <div className="App">
       {/* <h1>{currentTheme === "light" ? "Light theme" : "Dark theme"}</h1>
       <Button onClick={onClick}>Toggle theme</Button>
+      <br/>
+      <SearchBox/>
+      <br/>
       <Header />
       <br/>
       <OtpInputV3 length={6} />
@@ -76,9 +79,28 @@ const App = () => {
       </Button>
       <br/>
       <SearchBox list={[]} /> */}
-      <TopRestaurant/>
+      
+      <BrowserRouter>
+      
+        <Link to="/btn"> btn </Link>
+        <Switch>
+          <Route path="/btn">
+            <Demo></Demo>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+      <br/>
+      <br/>
     </div>
   );
 };
+
+function Demo() {
+  const match = useRouteMatch();
+  console.log(match.url, match.path);
+  return <Button>
+    Push me
+  </Button>
+}
 
 export default App;
