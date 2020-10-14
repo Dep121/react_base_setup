@@ -3,7 +3,8 @@ import SearchBox from '../components/SearchBox/SearchBox';
 import s from './TopRestaurant.module.scss';
 import { getRestaurant } from '../services';
 import ListItem from '../components/ListItem/ListItem';
-import Collapsible from '../components/Collapsible/Collapsible';
+// import Collapsible from '../components/Collapsible/Collapsible';
+import Collapsible from '../components/Collapsible_V2/Collapsible';
 
 function TopRestaurant() {
   const [topRstr, setTopRstr] = useState({});
