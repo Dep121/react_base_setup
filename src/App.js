@@ -6,6 +6,7 @@ import OtpInputV3 from "./components/OtpInputV3/OtpInputV3";
 import Button from "./components/Button/Button";
 import { BrowserRouter, Route, Switch, Link, useRouteMatch } from 'react-router-dom';
 import SearchBox from "./components/SearchBox/SearchBox";
+import TopRestaurant from "./views/TopRestaurant";
 
 const lightTheme = {
   "--color-primary": "#485922",
@@ -86,6 +87,9 @@ const App = () => {
         <Switch>
           <Route path="/btn">
             <Demo></Demo>
+          </Route>
+          <Route path="/home">
+            <TopRestaurant/>
           </Route>
         </Switch>
       </BrowserRouter>
